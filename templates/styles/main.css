@@ -318,12 +318,6 @@ body {
   margin-right: 0.5rem;
 }
 
-.product-item .icons li:hover,
-.product-item .icons li:hover i {
-  /* background-color: #dc143c;
-  color: #fff; */
-}
-
 .product-item .icons li {
   background-color: #fff;
 }
