@@ -366,6 +366,113 @@ body {
   transform: scale(1.1);
 }
 
+/* !ADVERTISEMENTS SECTION */
+#banners {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px;
+}
+
+#banners .banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("https://media.istockphoto.com/id/1172999527/vector/red-limited-offer-with-clock-for-promotion-banner-price-label-countdown-of-time-for-offer.jpg?s=612x612&w=0&k=20&c=3YQIjnq1KUffBnRE-hi79TMds_-IRpYK6T2poxTWc-0=");
+  min-width: 30%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#banners .banner-box1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://img.freepik.com/free-photo/sport-equipment_23-2148148964.jpg");
+  min-width: 30%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#banners .banner-box1 h2 {
+  padding-top: 10px;
+  color: white;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+#banners .banner-box1 h3 {
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+#banners .banner-box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-image: url("https://image5.cdnsbg.com/cms.smartbuyglasses.com/wp-content/uploads/2022/04/UV-Protection-Sunglasses-How-Different-Protection-Categories-Work.png?func=bound&w=600&h=480");
+  min-width: 30%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#banners .banner-box2 h2 {
+  margin-top: 0;
+  color: black;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+#banners .banner-box2 h3 {
+  padding-top: 20px;
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+#banners .banner-box3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoZI_Gw-nTtfrjzTVQjytwJtxjE6oUcoj-Jg&usqp=CAU");
+  min-width: 30%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#banners .banner-box3 h2 {
+  margin-top: 0;
+  color: #dc143c;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+#banners .banner-box3 h3 {
+  padding-top: 20px;
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+}
+
 /* !FOOTER ELEMENT */
 footer {
   background-color: #ececee;
