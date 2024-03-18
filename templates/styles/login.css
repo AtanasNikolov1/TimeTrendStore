@@ -55,7 +55,7 @@ body {
 
 form .row input:focus {
   border-color: #dc143c;
-  box-shadow: inset 0px 0px 1px 1px #dc143c47;
+  box-shadow: inset 0px 0px 2px 2px #dc143c34;
 }
 
 .wrapper form .row i {
