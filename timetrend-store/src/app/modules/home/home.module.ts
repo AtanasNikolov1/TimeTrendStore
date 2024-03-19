@@ -10,6 +10,9 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HeroSectionComponent
   ]
 })
 export class HomeModule { }
