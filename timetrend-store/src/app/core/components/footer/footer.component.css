@@ -3,10 +3,6 @@ footer {
   padding: 40px 80px 10px 80px;
 }
 
-footer .section-p1 {
-  padding-bottom: 0;
-}
-
 footer .info {
   display: flex;
   flex: wrap;
@@ -87,7 +83,7 @@ footer a::after {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #222; /* Change this to your desired color */
+  background-color: #222;
   transition: width 0.3s ease;
 }
 
