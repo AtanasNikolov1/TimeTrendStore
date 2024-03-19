@@ -1,0 +1,97 @@
+footer {
+  background-color: #ececee;
+  padding: 40px 80px 10px 80px;
+}
+
+footer .section-p1 {
+  padding-bottom: 0;
+}
+
+footer .info {
+  display: flex;
+  flex: wrap;
+  justify-content: space-between;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2px;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+  width: 100px;
+}
+
+footer h4 {
+  font-size: 18px;
+  padding-bottom: 20px;
+  color: #222;
+}
+
+footer p {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  color: #222;
+}
+
+footer a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+
+footer i {
+  color: #222;
+  font-size: 20px;
+  padding-right: 4px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .install .row img {
+  border: 1px solid #222;
+  border-radius: 6px;
+}
+
+footer .install .row img:first-child {
+  margin-right: 5px;
+}
+
+footer.install img {
+  margin: 15px 0 20px 0;
+}
+
+footer .follow i:hover {
+  font-weight: bold;
+  color: black;
+}
+
+footer a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #222; /* Change this to your desired color */
+  transition: width 0.3s ease;
+}
+
+footer a:hover {
+  color: black;
+  font-weight: bolder;
+}
