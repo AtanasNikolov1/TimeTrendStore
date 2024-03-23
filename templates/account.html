@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTrend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/account.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="./img/logo.png" class="logo" alt="logo" width="80"></a>
+        <nav>
+            <ul class="navbar">
+                <li><a class="active" href="/index.html">Home</a></li>
+                <li><a href="/products.html">Shop</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+        <ul class="navbar">
+            <li><a href="/templates/login.html"><img src="./img/user-icon.png" alt="user-icon" width="24"></a></li>
+            <li><a href="/cart.html"><img src="./img/bag-icon.png" alt="bag-icon" width="24"></a></li>
+        </ul>
+    </section>
+
+    <section id="settings" class="wrapper">
+        <h1 class="title"> Account Settings</h1>
+        <div class="settings">
+            <div class="account-settings">
+                <ul>
+                    <li>Account</li>
+                    <li>Delivery Addresses</li>
+                    <li><i class="fa-solid fa-right-from-bracket"></i></li>
+                </ul>
+            </div>
+            <div class="account-data">
+                <div class="profile-info">
+                    <h2>Personal Details</h2>
+                    <div class="details-wrapper">
+                        <form action="">
+                            <div class="full-name">
+                                <div class="first-name">
+                                    <label for="first-name">First name </label>
+                                    <br>
+                                    <input type="text" name="first-name" id="first-name">
+                                </div>
+                                <div class="last-name">
+                                    <label for="last-name">Last name </label>
+                                    <br>
+                                    <input type="text" name="last-name" id="last-name">
+                                </div>
+                            </div>
+                            <label for="email">Email </label>
+                            <br>
+                            <input type="email" name="email" id="email" class="email" readonly>
+                            <br>
+                            <label for="phone-number">Phone Number </label>
+                            <br>
+                            <input type="tel" name="phone-number" id="phone-number" class="phone-number">
+                            <button class="save">Save changes</button>
+                        </form>
+                        <div class="profile-picture">
+                            <img src="https://www.shareicon.net/download/2016/07/05/791214_man_512x512.png"
+                                alt="Profile picture">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="delivery-addresses">
+                    <h2>Delivery Addresses</h2>
+                    <div class="addresses-wrapper">
+                        <div class="address">
+                            <h1>HOME1</h1>
+                            <div class="columns">
+                                <p>First Name: ............</p>
+                                <p>Last Name: ............</p>
+                            </div>
+                            <div class="columns">
+                                <p>Phone: ............</p>
+                                <p>Country: ............</p>
+                            </div>
+                            <div class="columns">
+                                <p>City: ............</p>
+                                <p>Address: ............</p>
+                            </div>
+                            <div class="buttons">
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </div>
+                        </div>
+                        <div class="address">
+                            <h1>HOME2</h1>
+                            <div class="columns">
+                                <p>First Name: ............</p>
+                                <p>Last Name: ............</p>
+                            </div>
+                            <div class="columns">
+                                <p>Phone: ............</p>
+                                <p>Country: ............</p>
+                            </div>
+                            <div class="columns">
+                                <p>City: ............</p>
+                                <p>Address: ............</p>
+                            </div>
+                            <div class="buttons">
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="new-address">New Address</button>
+                </div>
+                <div class="edit-address">
+                    <h2>Edit Address</h2>
+                    <form action="#">
+                        <label for="first-name">First name</label>
+                        <input type="text" name="first-name" id="first-name">
+                        <br>
+                        <label for="last-name">Last name</label>
+                        <input type="text" name="last-name" id="last-name">
+                        <br>
+                        <label for="phone-number">Telephone</label>
+                        <input type="tel" name="phone-number" id="phone-number">
+                        <br>
+                        <label for="country">Country</label>
+                        <input type="text" name="country" id="country">
+                        <br>
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city">
+                        <br>
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address">
+                        <br>
+                        <button class="save">Save</button>
+                    </form>
+                </div>
+                <div class="edit-address">
+                    <h2>Add New Address</h2>
+                    <form action="#">
+                        <label for="address-nickname">Address nickname</label>
+                        <input type="text" name="address-nickname" id="address-nickname">
+                        <br>
+                        <label for="first-name">First name</label>
+                        <input type="text" name="first-name" id="first-name">
+                        <br>
+                        <label for="last-name">Last name</label>
+                        <input type="text" name="last-name" id="last-name">
+                        <br>
+                        <label for="phone-number">Telephone</label>
+                        <input type="tel" name="phone-number" id="phone-number">
+                        <br>
+                        <label for="country">Country</label>
+                        <input type="text" name="country" id="country">
+                        <br>
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city">
+                        <br>
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address">
+                        <br>
+                        <button class="save">Save</button>
+                    </form>
+                </div>
+            </div>
+
+    </section>
+</body>
+
+</html>
