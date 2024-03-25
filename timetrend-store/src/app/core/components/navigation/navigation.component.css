@@ -31,7 +31,7 @@ header {
   font-size: 20px;
   font-weight: 600;
   color: #ffffff;
-  transition: 0.3s ease;
+  transition: 0.4s ease;
 }
 
 .navbar li a::after {
@@ -41,8 +41,8 @@ header {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #ffffff; /* Change this to your desired color */
-  transition: width 0.3s ease;
+  background-color: #ffffff;
+  transition: width 0.4s ease;
 }
 
 .navbar li a:hover::after {
