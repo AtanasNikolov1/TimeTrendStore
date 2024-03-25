@@ -38,6 +38,7 @@ footer a {
   text-decoration: none;
   color: #222;
   margin-bottom: 10px;
+  pointer-events: none;
 }
 
 footer .copyright {
@@ -74,17 +75,6 @@ footer.install img {
 footer .follow i:hover {
   font-weight: bold;
   color: black;
-}
-
-footer a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #222;
-  transition: width 0.3s ease;
 }
 
 footer a:hover {
