@@ -1,0 +1,74 @@
+<app-navigation></app-navigation>
+
+<!-- CART SECTION -->
+<section id="cart" class="section-p1">
+    <table>
+        <thead>
+            <tr>
+                <td>Remove</td>
+                <td>Image</td>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Subtotal</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="#"><i class="fa-solid fa-trash"></i></a></td>
+                <td><img src="../../../../../assets/images/t-shirt-model.jpg" alt=""></td>
+                <td>Nike T-shirt</td>
+                <td>$120.00</td>
+                <td><input type="number" name="quantity" id="quantity" value="1"></td>
+                <td>$120.00</td>
+            </tr>
+            <tr>
+                <td><a href="#"><i class="fa-solid fa-trash"></i></a></td>
+                <td><img src="../../../../../assets/images/t-shirt-model.jpg" alt=""></td>
+                <td>Nike T-shirt</td>
+                <td>$120.00</td>
+                <td><input type="number" name="quantity" id="quantity" value="1"></td>
+                <td>$120.00</td>
+            </tr>
+            <tr>
+                <td><a href="#"><i class="fa-solid fa-trash"></i></a></td>
+                <td><img src="../../../../../assets/images/t-shirt-model.jpg" alt=""></td>
+                <td>Nike T-shirt</td>
+                <td>$120.00</td>
+                <td><input type="number" name="quantity" id="quantity" value="1"></td>
+                <td>$120.00</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="cart-add" class="section-p1">
+    <div id="subtotal">
+        <h3>Cart Totals</h3>
+        <table>
+            <tr>
+                <td>Cart Subtotal</td>
+                <td>$335</td>
+            </tr>
+            <tr>
+                <td>Shipping</td>
+                <td>Free</td>
+            </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>$335</strong></td>
+            </tr>
+        </table>
+        <div class="address">
+            <h3>Choose Delivery Address</h3>
+            <select id="payment-method">
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Bank Transfer</option>
+            </select>
+        </div>
+        <button class="order">Finish order</button>
+    </div>
+</section>
+
+<app-footer></app-footer>
