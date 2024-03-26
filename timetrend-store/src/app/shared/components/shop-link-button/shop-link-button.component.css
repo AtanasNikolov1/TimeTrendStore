@@ -1,0 +1,28 @@
+button {
+  display: block;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 20px 30px;
+  border: 1px solid #dc143c;
+  background: #dc143c;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 20px 30px;
+  border: 1px solid #222222;
+  background: #fff;
+  color: #222222;
+}
