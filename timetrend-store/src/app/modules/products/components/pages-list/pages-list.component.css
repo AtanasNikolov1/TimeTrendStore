@@ -1,0 +1,21 @@
+#pagination {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+#pagination a {
+  text-decoration: none;
+  background-color: #dc143c;
+  color: #fff;
+  padding: 15px 20px;
+  border: 2px solid #dc143c;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+#pagination a:hover {
+  transition: 0.3s ease;
+  background-color: #fff;
+  color: #dc143c;
+}

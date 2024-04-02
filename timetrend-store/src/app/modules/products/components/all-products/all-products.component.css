@@ -1,0 +1,31 @@
+.title {
+  text-align: center;
+  margin-top: 64px;
+  margin-bottom: 80px;
+}
+
+.title h2 {
+  font-size: 58px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-weight: 500;
+  color: #dc143c;
+  line-height: 80px;
+}
+
+.title p {
+  font-size: 20px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.product-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 0;
+  /* margin-bottom: 30px; */
+  padding: 0 auto;
+}
