@@ -1,0 +1,19 @@
+<section class="section new-arrival">
+    <div class="title">
+        <h2>Latest Products</h2>
+        <p>Explore our newest products and stay ahead of the trends.</p>
+    </div>
+    <div class="product-center">
+        <ng-container *ngIf="latestProducts$ | async as latestProducts; else loadingTemplate">
+            <app-product *ngFor="let product of latestProducts" [product]="product"></app-product>
+        </ng-container>
+        <ng-template #loadingTemplate>
+            <app-loading></app-loading>
+        </ng-template>
+        <ng-template #errorTemplate>
+            <div class="error-message">
+                <app-error [error]="errorMessage"></app-error>
+            </div>
+        </ng-template>
+    </div>
+</section>
