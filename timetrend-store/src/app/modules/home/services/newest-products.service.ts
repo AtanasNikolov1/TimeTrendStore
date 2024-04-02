@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable, throwError } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Product } from 'src/app/core/interfaces/product.interface';
 
 @Injectable({

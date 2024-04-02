@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/core/interfaces/product.interface';
 import { ProductsService } from '../../services/products.service';
-import { Observable, catchError, finalize, throwError } from 'rxjs';
+import { Observable, catchError, finalize, tap, throwError } from 'rxjs';
 
 @Component({
   selector: 'app-all-products',
@@ -17,6 +17,9 @@ export class AllProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.products$ = this.productsService.getAllProducts().pipe(
+      tap(() => {
+        this.loading = false;
+      }),
       catchError((error) => {
         console.log('Error fetching products:', error);
         this.errorMessage = 'Failed to fetch products';
