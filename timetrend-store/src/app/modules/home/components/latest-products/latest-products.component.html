@@ -4,16 +4,16 @@
         <p>Explore our newest products and stay ahead of the trends.</p>
     </div>
     <div class="product-center">
-        <ng-container *ngIf="latestProducts$ | async as latestProducts; else loadingTemplate">
+        <ng-container *ngIf="loading">
+            <app-loading></app-loading>
+        </ng-container>
+        <ng-container *ngIf="latestProducts$ | async as latestProducts">
             <app-product *ngFor="let product of latestProducts" [product]="product"></app-product>
         </ng-container>
-        <ng-template #loadingTemplate>
-            <app-loading></app-loading>
-        </ng-template>
-        <ng-template #errorTemplate>
+        <ng-container *ngIf="errorMessage != undefined">
             <div class="error-message">
                 <app-error [error]="errorMessage"></app-error>
             </div>
-        </ng-template>
+        </ng-container>
     </div>
 </section>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/core/interfaces/product.interface';
 import { LatestProductsService } from '../../services/newest-products.service';
 import { Observable, throwError } from 'rxjs';
-import { catchError, finalize } from 'rxjs/operators';
+import { catchError, finalize, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-latest-products',
@@ -18,10 +18,12 @@ export class LatestProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.latestProducts$ = this.latestProductsService.getNewestProducts().pipe(
+      tap(() => {
+        this.loading = false;
+      }),
       catchError((error) => {
         console.log('Error fetching latest products:', error);
         this.errorMessage = 'Failed to fetch latest products';
-        this.loading = false;
         return throwError(this.errorMessage);
       }),
       finalize(() => {
