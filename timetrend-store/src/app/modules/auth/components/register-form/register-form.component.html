@@ -1,24 +1,102 @@
-<form action="#">
+<form [formGroup]="form" (ngSubmit)="register()">
+    <!-- *FirstName -->
     <div class="row">
         <i class="fa-solid fa-user"></i>
-        <input type="text" placeholder="Name" required>
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" formControlName="firstName" />
     </div>
+    <ng-container *ngIf="form.get('firstName')?.touched">
+        <p class="error" *ngIf="form.get('firstName')?.errors?.['required']">
+            <i class="fa-solid fa-circle-exclamation"></i>First Name is required!
+        </p>
+        <p class="error" *ngIf="form.get('firstName')?.errors?.['minlength']">
+            <i class="fa-solid fa-circle-exclamation"></i>First Name must be at least 2 characters long!
+        </p>
+        <p class="error" *ngIf="form.get('firstName')?.errors?.['pattern']">
+            <i class="fa-solid fa-circle-exclamation"></i>First Name must start with a capital letter and consist only
+            of letters!
+        </p>
+    </ng-container>
+    <!-- *LastName -->
+    <div class="row">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" formControlName="lastName" />
+    </div>
+    <ng-container *ngIf="form.get('lastName')?.touched">
+        <p class="error" *ngIf="form.get('lastName')?.errors?.['required']">
+            <i class="fa-solid fa-circle-exclamation"></i>Last Name is required!
+        </p>
+        <p class="error" *ngIf="form.get('lastName')?.errors?.['minlength']">
+            <i class="fa-solid fa-circle-exclamation"></i>Last Name must be at least 2 characters long!
+        </p>
+        <p class="error" *ngIf="form.get('lastName')?.errors?.['pattern']">
+            <i class="fa-solid fa-circle-exclamation"></i>Last Name must start with a capital letter and consist only
+            of letters!
+        </p>
+    </ng-container>
+    <!-- *Phone Number -->
+    <div class="row">
+        <i class="fa-solid fa-phone"></i>
+        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number"
+            formControlName="phoneNumber" />
+    </div>
+    <ng-container *ngIf="form.get('phoneNumber')?.touched">
+        <p class="error" *ngIf="form.get('phoneNumber')?.errors?.['required']">
+            <i class="fa-solid fa-circle-exclamation"></i> Phone Number is required!
+        </p>
+        <p class="error" *ngIf="form.get('phoneNumber')?.errors?.['invalidPhoneNumber']">
+            <i class="fa-solid fa-circle-exclamation"></i> Phone Number must be in format 08XXXXXXXX!
+        </p>
+    </ng-container>
+    <!-- *Email -->
     <div class="row">
         <i class="fa-solid fa-envelope"></i>
-        <input type="email" placeholder="Email" required>
+        <input type="email" id="email" name="email" placeholder="Email" formControlName="email" />
     </div>
-    <div class="row">
-        <i class="fa-solid fa-lock"></i>
-        <input type="password" placeholder="Password" required>
-    </div>
-    <div class="row">
-        <i class="fa-solid fa-key"></i>
-        <input type="password" placeholder="Re-password" required>
-    </div>
+    <ng-container *ngIf="form.get('email')?.touched">
+        <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+            <i class="fa-solid fa-circle-exclamation"></i> Email is required!
+        </p>
+        <p class="error" *ngIf="form.get('email')?.errors?.['invalidEmail']">
+            <i class="fa-solid fa-circle-exclamation"></i> Email must start with at least 6 letters followed by
+            '@gmail.com' or '@abv.bg'!
+        </p>
+    </ng-container>
+    <!-- *Passwords -->
+    <ng-container formGroupName="passGroup">
+        <!-- *Password -->
+        <div class="row">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Password" formControlName="password" />
+        </div>
+        <ng-container *ngIf="form.get('passGroup.password')?.touched">
+            <p class="error" *ngIf="form.get('passGroup.password')?.errors?.['required']">
+                <i class="fa-solid fa-circle-exclamation"></i>Password is required!
+            </p>
+            <p class="error" *ngIf="form.get('passGroup.password')?.errors?.['minlength']">
+                <i class="fa-solid fa-circle-exclamation"></i>Minimum length has to be 6!
+            </p>
+        </ng-container>
+        <!-- *rePassword -->
+        <div class="row">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" id="rePassword" name="rePassword" placeholder="Re-password"
+                formControlName="rePassword" />
+        </div>
+        <ng-container *ngIf="form.get('passGroup.rePassword')?.touched">
+            <p class="error" *ngIf="form.get('passGroup.rePassword')?.errors?.['required']">
+                <i class="fa-solid fa-circle-exclamation"></i>Password is required!
+            </p>
+        </ng-container>
+        <ng-container *ngIf="form.get('passGroup')?.errors?.['passwordMismatch']">
+            <p class="error">
+                <i class="fa-solid fa-circle-exclamation"></i> Passwords do not match!
+            </p>
+        </ng-container>
+    </ng-container>
     <div class="row button">
-        <input type="submit" value="Sign Up">
+        <input type="submit" value="Sign Up" />
     </div>
     <div class="signUp-link">
-        Already have an account? <a href="#">Log In</a>
+        Already have an account? <a routerLink="/login">Log In</a>
     </div>
 </form>

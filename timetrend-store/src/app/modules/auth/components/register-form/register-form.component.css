@@ -1,9 +1,10 @@
 form {
-  padding: 30px 25px 25px 25px;
+  padding: 30px 40px 25px 40px;
 }
 
 form .row {
   height: 45px;
+  margin-top: 15px;
   margin-bottom: 15px;
   position: relative;
 }
@@ -19,9 +20,14 @@ form .row input {
   transition: all 0.3s ease;
 }
 
+form .row input:hover {
+  cursor: pointer;
+}
+
 form .row input:focus {
   border-color: #dc143c;
   box-shadow: inset 0px 0px 2px 2px #dc143c34;
+  cursor: text;
 }
 
 form .row i {
@@ -44,13 +50,13 @@ form .button input {
   padding-left: 0px;
   background: #dc143c;
   border: 1px solid #dc143c;
-  cursor: pointer;
 }
 
 form .button input:hover {
   color: #dc143c;
   background: #fff;
   border: 1px solid #dc143c;
+  cursor: pointer;
 }
 
 form .signUp-link {
@@ -82,4 +88,17 @@ form .signUp-link a::before {
 form .signUp-link a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+
+.error {
+  font-size: 18px;
+  color: red;
+  padding: 2px;
+  text-align: center;
+}
+
+.error i {
+  font-size: 18px;
+  color: red;
+  padding-right: 4px;
 }

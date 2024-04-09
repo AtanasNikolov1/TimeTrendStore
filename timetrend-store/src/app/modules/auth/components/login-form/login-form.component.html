@@ -1,16 +1,32 @@
-<form action="#">
+<form [formGroup]="form" (ngSubmit)="login()">
+    <!-- *Email -->
     <div class="row">
         <i class="fa-solid fa-user"></i>
-        <input type="text" placeholder="Email" required>
+        <input type="email" id="email" name="email" placeholder="Email" formControlName="email" />
     </div>
+    <ng-container *ngIf="form.get('email')?.touched">
+        <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+            <i class="fa-solid fa-circle-exclamation"></i> Email is required!
+        </p>
+        <p class="error" *ngIf="form.get('email')?.errors?.['invalidEmail']">
+            <i class="fa-solid fa-circle-exclamation"></i> Email must start with at least 6 letters followed by
+            '@gmail.com' or '@abv.bg'!
+        </p>
+    </ng-container>
+    <!-- *Password -->
     <div class="row">
         <i class="fa-solid fa-lock"></i>
-        <input type="password" placeholder="Password" required>
+        <input type="password" id="password" name="password" placeholder="Password" formControlName="password" />
     </div>
+    <ng-container *ngIf="form.get('password')?.touched">
+        <p class="error" *ngIf="form.get('password')?.errors?.['required']">
+            <i class="fa-solid fa-circle-exclamation"></i>Password is required!
+        </p>
+    </ng-container>
     <div class="row button">
         <input type="submit" value="Login">
     </div>
-    <div class="signUp-link">
-        Not a member? <a href="#">Sign up now</a>
+    <div class=" signUp-link">
+        Not a member? <a routerLink="/register">Sign up now</a>
     </div>
 </form>

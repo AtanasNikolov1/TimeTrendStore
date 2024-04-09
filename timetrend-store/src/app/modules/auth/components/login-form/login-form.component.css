@@ -4,6 +4,7 @@ form {
 
 form .row {
   height: 45px;
+  margin-top: 15px;
   margin-bottom: 15px;
   position: relative;
 }
@@ -82,4 +83,17 @@ form .signUp-link a::before {
 form .signUp-link a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+
+.error {
+  font-size: 18px;
+  color: red;
+  padding: 2px;
+  text-align: center;
+}
+
+.error i {
+  font-size: 18px;
+  color: red;
+  padding-right: 4px;
 }

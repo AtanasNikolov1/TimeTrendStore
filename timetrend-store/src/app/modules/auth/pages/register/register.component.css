@@ -1,25 +1,14 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Nunito Sans", sans-serif;
-}
-
-body {
-  background: #ececee;
-  overflow: hidden;
-}
-
 .container {
-  max-width: 440px;
+  max-width: 500px;
   padding: 0 20px;
-  margin: 170px auto;
+  margin: 70px auto;
 }
 
 .wrapper {
   width: 100%;
   background: #fff;
-  border-radius: 5px;
+  border-radius: 8px;
+  border: 2px solid #dc143c;
 }
 
 .wrapper .title {
@@ -31,93 +20,3 @@ body {
   font-size: 30px;
   font-weight: 600;
 }
-
-.wrapper form {
-  padding: 30px 25px 25px 25px;
-}
-
-.wrapper form .row {
-  height: 45px;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.wrapper form .row input {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  padding-left: 60px;
-  border-radius: 5px;
-  border: 1px solid rgb(165, 164, 164);
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-form .row input:focus {
-  border-color: #dc143c;
-  box-shadow: inset 0px 0px 2px 2px #dc143c34;
-}
-
-.wrapper form .row i {
-  position: absolute;
-  width: 47px;
-  height: 100%;
-  color: #fff;
-  font-size: 18px;
-  background: #dc143c;
-  border-radius: 5px 0 0 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.wrapper form .button input {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 500;
-  padding-left: 0px;
-  background: #dc143c;
-  border: 1px solid #dc143c;
-  cursor: pointer;
-}
-
-form .button input:hover {
-  color: #dc143c;
-  background: #fff;
-  border: 1px solid #dc143c;
-}
-
-.wrapper form .signUp-link {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 17px;
-}
-
-.wrapper form .signUp-link a {
-  color: #dc143c;
-  position: relative;
-  text-decoration: none;
-}
-
-.wrapper form .signUp-link a::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  border-radius: 4px;
-  background-color: #dc143c;
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.wrapper form .signUp-link a:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
-}
-
-/* .wrapper form .signUp-link a:hover {
-  text-decoration: underline;
-} */
