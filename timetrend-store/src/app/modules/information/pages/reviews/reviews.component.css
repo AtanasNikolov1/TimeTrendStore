@@ -1,5 +1,7 @@
-p {
-  font-size: 32px;
-  background-color: burlywood;
-  padding: 20px;
+#testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
