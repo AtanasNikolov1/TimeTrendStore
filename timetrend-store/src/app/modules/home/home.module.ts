@@ -7,6 +7,7 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
 import { SharedModule } from 'src/app/shared/shared.module';
 import { LatestProductsComponent } from './components/latest-products/latest-products.component';
 import { PromotionsComponent } from './components/promotions/promotions.component';
+import { LatestProductsService } from './services/newest-products.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { PromotionsComponent } from './components/promotions/promotions.componen
     PromotionsComponent,
   ],
   imports: [CommonModule, RouterModule, SharedModule, CoreModule],
-  providers: [],
+  providers: [LatestProductsService],
   exports: [HomeComponent],
 })
 export class HomeModule {}
