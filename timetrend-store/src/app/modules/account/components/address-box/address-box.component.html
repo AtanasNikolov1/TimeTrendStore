@@ -1,0 +1,19 @@
+<div class="address">
+    <h1>{{address.addressNickname}}</h1>
+    <div class="columns">
+        <p class="color">First Name: <span>{{address.firstName}}</span></p>
+        <p class="color">Last Name: <span>{{address.lastName}}</span></p>
+    </div>
+    <div class="columns">
+        <p class="color">Phone: <span>{{address.phoneNumber}}</span></p>
+        <p class="color">Country: <span>{{address.country}}</span></p>
+    </div>
+    <div class="columns">
+        <p class="color">City: <span>{{address.city}}</span></p>
+        <p class="color">Address: <span>{{address.address}}</span></p>
+    </div>
+    <div class="buttons">
+        <button [routerLink]="'/account/addresses/edit/' + address.id">Edit</button>
+        <button (click)="deleteAddress(address.id)">Delete</button>
+    </div>
+</div>

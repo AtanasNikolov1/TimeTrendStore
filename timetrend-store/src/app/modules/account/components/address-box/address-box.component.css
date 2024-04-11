@@ -1,0 +1,80 @@
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.addresses-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.address {
+  width: 80%;
+  border: 1px solid #666;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.columns {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.columns p {
+  font-size: 22px;
+  width: 50%;
+  color: #dc143c;
+  margin-left: 20px;
+}
+
+.columns span {
+  padding-left: 5px;
+  color: #000;
+}
+
+.address h1 {
+  font-size: 20px;
+  padding: 0;
+  border-bottom: 1px solid #666;
+  line-height: 60px;
+  text-align: center;
+  background-color: #dc143c;
+  color: #fff;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.address button,
+.new-address {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+  background-color: #dc143c;
+  border: 1px solid #dc143c;
+  border-radius: 4px;
+  transition: ease 0.2s;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.address button:hover,
+.new-address:hover {
+  color: #dc143c;
+  background-color: #fff;
+  border-radius: 4px;
+}
