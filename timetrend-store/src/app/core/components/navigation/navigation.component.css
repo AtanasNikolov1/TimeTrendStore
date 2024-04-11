@@ -2,8 +2,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 80px;
-  background-color: rgb(220, 20, 60);
+  padding: 10px 80px;
+  background-color: #dc143c;
   z-index: 99;
   position: sticky;
   top: 0;
