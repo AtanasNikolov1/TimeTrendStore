@@ -1,0 +1,64 @@
+.edit-address h2 {
+  font-size: 22px;
+  padding: 0;
+  border-bottom: 1px solid #666;
+  line-height: 60px;
+  text-align: center;
+  background-color: #dc143c;
+  color: #fff;
+}
+
+.edit-address form {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.edit-address form input {
+  margin-left: 5px;
+  width: 50%;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.edit-address form input:focus {
+  outline: 2px solid #dc143cb9;
+}
+
+.save {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+  background-color: #dc143c;
+  border: 1px solid #dc143c;
+  border-radius: 4px;
+  transition: ease 0.2s;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.save:hover {
+  color: #dc143c;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.error {
+  font-size: 18px;
+  color: red;
+  padding: 2px;
+  text-align: center;
+}
+
+.error i {
+  font-size: 18px;
+  color: red;
+  padding-right: 4px;
+}
