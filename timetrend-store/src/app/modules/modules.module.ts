@@ -4,7 +4,7 @@ import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
 import { ProductsModule } from './products/products.module';
 import { InformationModule } from './information/information.module';
-import { OrderModule } from './order/order.module';
+import { AccountModule } from './account/account.module';
 
 @NgModule({
   declarations: [],
@@ -14,14 +14,14 @@ import { OrderModule } from './order/order.module';
     HomeModule,
     ProductsModule,
     InformationModule,
-    OrderModule,
+    AccountModule,
   ],
   exports: [
     AuthModule,
     HomeModule,
     ProductsModule,
     InformationModule,
-    OrderModule,
+    AccountModule,
   ],
 })
 export class ModulesModule {}
