@@ -1,0 +1,36 @@
+<div class="testimonial-box-container">
+    <ng-container *ngIf="loading">
+        <app-loading></app-loading>
+    </ng-container>
+    <div class="testimonial-box" *ngFor="let review of (reviews$ | async)">
+        <div class="box-top">
+            <div class="profile">
+                <!-- img -->
+                <div class="profile-img">
+                    <img src="{{review.imgUrl}}" alt="{{review.name}}">
+                </div>
+                <!-- name and username -->
+                <div class="name-user">
+                    <strong>{{review.name}}</strong>
+                    <span>{{review.username}}</span>
+                </div>
+            </div>
+            <div class="reviews">
+                <ng-container *ngFor="let star of getStars(review.rating)">
+                    <i class="fas fa-star"></i>
+                </ng-container>
+                <ng-container *ngFor="let emptyStar of getEmptyStars(review.rating)">
+                    <i class="far fa-star"></i>
+                </ng-container>
+            </div>
+        </div>
+        <div class="client-comment">
+            <p>{{review.comment}}</p>
+        </div>
+    </div>
+    <ng-container *ngIf="errorMessage != undefined">
+        <div class="error-message">
+            <app-error [error]="errorMessage"></app-error>
+        </div>
+    </ng-container>
+</div>
