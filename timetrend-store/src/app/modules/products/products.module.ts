@@ -7,6 +7,9 @@ import { AllProductsComponent } from './components/all-products/all-products.com
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PagesListComponent } from './components/pages-list/pages-list.component';
 import { RouterModule } from '@angular/router';
+import { DetailsComponent } from './components/details/details.component';
+// import { ReactiveFormsModule } from '@angular/forms';
+import { ProductsService } from './services/products.service';
 
 @NgModule({
   declarations: [
@@ -14,8 +17,16 @@ import { RouterModule } from '@angular/router';
     ProductDetailsComponent,
     AllProductsComponent,
     PagesListComponent,
+    DetailsComponent,
   ],
-  imports: [CommonModule, CoreModule, SharedModule, RouterModule],
+  imports: [
+    CommonModule,
+    CoreModule,
+    SharedModule,
+    RouterModule,
+    // ReactiveFormsModule,
+  ],
+  providers: [ProductsService],
   exports: [ProductsComponent, ProductDetailsComponent],
 })
 export class ProductsModule {}
