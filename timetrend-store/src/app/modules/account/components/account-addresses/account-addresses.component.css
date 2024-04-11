@@ -1,0 +1,44 @@
+.delivery-addresses h2 {
+  font-size: 22px;
+  padding: 0;
+  border-bottom: 1px solid #666;
+  line-height: 60px;
+  text-align: center;
+  background-color: #dc143c;
+  color: #fff;
+}
+
+.new-address {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+  background-color: #dc143c;
+  border: 1px solid #dc143c;
+  border-radius: 4px;
+  transition: ease 0.2s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.new-address:hover {
+  color: #dc143c;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.new-address {
+  margin-left: 42%;
+}
+
+.no-addresses {
+  text-align: center;
+  font-size: 24px;
+  color: #dc143c;
+  margin-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

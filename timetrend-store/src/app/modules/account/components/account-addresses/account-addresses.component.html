@@ -1,0 +1,22 @@
+<ng-container *ngIf="loading" class="center">
+    <app-loading></app-loading>
+</ng-container>
+<div class="delivery-addresses">
+    <h2>Delivery Addresses</h2>
+    <div class="addresses-wrapper">
+        <ng-container *ngIf="user$ | async as user">
+            <ng-container *ngIf="user.addresses && user.addresses.length > 0; else noAddresses">
+                <app-address-box *ngFor="let address of user.addresses" [address]="address"></app-address-box>
+            </ng-container>
+            <ng-template #noAddresses>
+                <h4 class="no-addresses">No Addresses</h4>
+            </ng-template>
+        </ng-container>
+    </div>
+    <button class="new-address" routerLink="/account/addresses/add">New Address</button>
+</div>
+<ng-container *ngIf="errorMessage != undefined">
+    <div class="error-message">
+        <app-error [error]="errorMessage"></app-error>
+    </div>
+</ng-container>
