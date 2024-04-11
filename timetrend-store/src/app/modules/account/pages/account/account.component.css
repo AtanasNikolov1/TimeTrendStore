@@ -1,0 +1,112 @@
+h1 {
+  font-size: 75px;
+  line-height: 80px;
+  color: #222;
+}
+
+h2 {
+  font-size: 56px;
+  line-height: 80px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+.wrapper {
+  max-width: 80%;
+  color: #222;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  /* padding-top: 20px; */
+  padding-bottom: 20px;
+  border: 1px solid #444;
+  background-color: #fff;
+}
+
+/* *Title Settings */
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  padding-left: 10px;
+  text-align: center;
+  border: 1px solid #dc143c;
+  background: #dc143c;
+  color: #fff;
+}
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  flex-grow: 1;
+}
+
+/* *Account Setting List */
+.account-settings {
+  min-width: 10%;
+  max-width: 20%;
+  /* border: 1px solid #465b52; */
+  margin: 10px;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  flex-grow: 3;
+}
+
+.account-settings ul {
+  list-style: none;
+}
+
+.account-settings li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 0.2px solid #fff;
+  border-bottom: 0.2px solid #fff;
+  border-left: 0.2px solid #dc143c;
+  border-right: 0.2px solid #dc143c;
+  font-size: 20px;
+  background-color: #dc143c;
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  transition: ease 0.3s;
+}
+
+.account-settings li:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #dc143c;
+  border-top: 0.2px solid #dc143c;
+  border-bottom: 0.2px solid #dc143c;
+}
+.account-data {
+  min-width: 75%;
+  border: 1px solid #465b52;
+  margin: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}

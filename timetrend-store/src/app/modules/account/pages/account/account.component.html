@@ -1,0 +1,20 @@
+<app-navigation></app-navigation>
+<section id="settings" class="wrapper">
+    <h1 class="title"> Account Settings</h1>
+    <div class="settings">
+        <div class="account-settings">
+            <ul>
+                <li routerLink="/account/info">Account</li>
+                <li routerLink="/account/addresses">Delivery Addresses</li>
+                <li (click)="logout()"><i class="fa-solid fa-right-from-bracket"></i></li>
+            </ul>
+        </div>
+        <div class="account-data">
+            <router-outlet></router-outlet>
+            <!-- <app-account-info></app-account-info>
+            <app-account-addresses></app-account-addresses> -->
+            <!-- <app-edit-address></app-edit-address>
+            <app-add-address></app-add-address> -->
+        </div>
+    </div>
+</section>
