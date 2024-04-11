@@ -1,0 +1,39 @@
+<section id="product-details" class="section-p1">
+    <ng-container *ngIf="loading" class="center">
+        <app-loading></app-loading>
+    </ng-container>
+    <ng-container *ngIf="product$ | async as product">
+        <div class="product-image">
+            <img src="{{product.imageUrl}}" alt="Product" class="main-image">
+        </div>
+        <div class="details">
+            <h4 class="name">{{product.name}}</h4>
+            <h6 class="category">{{product.category}}</h6>
+            <h2 class="price">{{product.price}} BGN</h2>
+            <h3 class="sizes-title">Available Sizes</h3>
+            <div class="sizes">
+                <ng-container *ngFor="let size of product.sizes">
+                    <p>{{size}}</p>
+                </ng-container>
+            </div>
+            <!-- <form>
+                <select class="sizes">
+                    <option value="">Select Size</option>
+                    <option *ngFor="let size of product.sizes">{{ size }}</option>
+                </select>
+                <input type="number" class="quantity">
+                <button type="submit" class="cart">Add To Cart</button>
+            </form> -->
+
+            <h4 class="details-title">Product Details</h4>
+            <p class="description">
+                {{product.description}}
+            </p>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="errorMessage != undefined">
+        <div class="error-message">
+            <app-error [error]="errorMessage"></app-error>
+        </div>
+    </ng-container>
+</section>
