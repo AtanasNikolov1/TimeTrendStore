@@ -1,0 +1,38 @@
+<ng-container *ngIf="loading" class="center">
+    <app-loading></app-loading>
+</ng-container>
+<div class="profile-info" *ngIf="user$ | async as user">
+    <h2>Personal Details</h2>
+    <div class="details-wrapper">
+        <div class="info">
+            <div class="personal-details">
+                <div class="name">
+                    <p class="label">First Name:</p>
+                    <p class="data">{{ user.firstName }}</p>
+                </div>
+                <div class="name">
+                    <p class="label">Last Name:</p>
+                    <p class="data">{{ user.lastName }}</p>
+                </div>
+                <div class="email">
+                    <p class="label">Email:</p>
+                    <p class="data">{{ user.email }}</p>
+                </div>
+                <div class="phone-number">
+                    <p class="label">Phone Number:</p>
+                    <p class="data">{{ user.phoneNumber }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="profile-picture">
+            <img src="https://static.vecteezy.com/system/resources/previews/005/129/844/non_2x/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg"
+                alt="Profile picture">
+        </div>
+    </div>
+</div>
+
+<ng-container *ngIf="errorMessage != undefined">
+    <div class="error-message">
+        <app-error [error]="errorMessage"></app-error>
+    </div>
+</ng-container>
