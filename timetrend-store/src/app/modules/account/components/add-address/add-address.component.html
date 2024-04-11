@@ -1,0 +1,114 @@
+<div class="edit-address">
+    <h2>Add New Address</h2>
+    <form [formGroup]="addressForm" (ngSubmit)="addAddress()">
+        <!-- *Address Nickname -->
+        <div class="row">
+            <label for="addressNickname">Address nickname</label>
+            <input type="text" id="addressNickname" formControlName="addressNickname">
+        </div>
+        <ng-container *ngIf="addressForm.get('addressNickname')?.touched">
+            <p class="error" *ngIf="addressForm.get('addressNickname')?.errors?.['required']">
+                <i class="fa-solid fa-circle-exclamation"></i>Address Nickname is required!
+            </p>
+            <p class="error" *ngIf="addressForm.get('addressNickname')?.errors?.['minlength']">
+                <i class="fa-solid fa-circle-exclamation"></i>Address Nickname must be at least 4 characters long!
+            </p>
+        </ng-container>
+        <!-- *First Name -->
+        <div class="row">
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" formControlName="firstName">
+        </div>
+        <ng-container *ngIf="addressForm.get('firstName')?.touched">
+            <p class="error" *ngIf="addressForm.get('firstName')?.errors?.['required']">
+                <i class="fa-solid fa-circle-exclamation"></i>First Name is required!
+            </p>
+            <p class="error" *ngIf="addressForm.get('firstName')?.errors?.['minlength']">
+                <i class="fa-solid fa-circle-exclamation"></i>First Name must be at least 2 characters long!
+            </p>
+            <p class="error" *ngIf="addressForm.get('firstName')?.errors?.['pattern']">
+                <i class="fa-solid fa-circle-exclamation"></i>First Name must consist only of letters and can include
+                '-' or ' '!
+            </p>
+        </ng-container>
+        <!-- *Last Name -->
+        <div class="row">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" formControlName="lastName">
+        </div>
+        <ng-container *ngIf="addressForm.get('lastName')?.touched">
+            <p class="error" *ngIf="addressForm.get('lastName')?.errors?.['required']">
+                <i class="fa-solid fa-circle-exclamation"></i>Last Name is required!
+            </p>
+            <p class="error" *ngIf="addressForm.get('lastName')?.errors?.['minlength']">
+                <i class="fa-solid fa-circle-exclamation"></i>Last Name must be at least 2 characters long!
+            </p>
+            <p class="error" *ngIf="addressForm.get('lastName')?.errors?.['pattern']">
+                <i class="fa-solid fa-circle-exclamation"></i>Last Name must consist only of letters and can include '-'
+                or ' '!
+            </p>
+        </ng-container>
+        <!-- *Phone number -->
+        <div class="row">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" formControlName="phoneNumber">
+        </div>
+        <ng-container *ngIf="addressForm.get('phoneNumber')?.touched">
+            <p class="error" *ngIf="addressForm.get('phoneNumber')?.errors?.['required']">
+                <i class="fa-solid fa-circle-exclamation"></i> Phone Number is required!
+            </p>
+            <p class="error" *ngIf="addressForm.get('phoneNumber')?.errors?.['invalidPhoneNumber']">
+                <i class="fa-solid fa-circle-exclamation"></i> Phone Number must be in format 08XXXXXXXX!
+            </p>
+        </ng-container>
+        <!-- *Country -->
+        <div class="row">
+            <label for="country">Country</label>
+            <input type="text" id="country" formControlName="country">
+        </div>
+        <ng-container *ngIf="addressForm.get('country')?.touched">
+            <p class="error" *ngIf="addressForm.get('country')?.errors?.['required']">
+                <i class="fa-solid fa-circle-exclamation"></i>Country is required!
+            </p>
+            <p class="error" *ngIf="addressForm.get('country')?.errors?.['minlength']">
+                <i class="fa-solid fa-circle-exclamation"></i>Country must be at least 4 characters long!
+            </p>
+            <p class="error" *ngIf="addressForm.get('country')?.errors?.['pattern']">
+                <i class="fa-solid fa-circle-exclamation"></i>Country must consist only of letters!
+            </p>
+        </ng-container>
+        <!-- *City -->
+        <div class="row">
+            <label for="city">City</label>
+            <input type="text" id="city" formControlName="city">
+        </div>
+        <ng-container *ngIf="addressForm.get('city')?.touched">
+            <p class="error" *ngIf="addressForm.get('city')?.errors?.['required']">
+                <i class="fa-solid fa-circle-exclamation"></i>City is required!
+            </p>
+            <p class="error" *ngIf="addressForm.get('city')?.errors?.['minlength']">
+                <i class="fa-solid fa-circle-exclamation"></i>City must be at least 4 characters long!
+            </p>
+            <p class="error" *ngIf="addressForm.get('city')?.errors?.['pattern']">
+                <i class="fa-solid fa-circle-exclamation"></i>City must consist only of letters!
+            </p>
+        </ng-container>
+        <!-- *Address -->
+        <div class="row">
+            <label for="address">Address</label>
+            <input type="text" id="address" formControlName="address">
+        </div>
+        <ng-container *ngIf="addressForm.get('address')?.touched">
+            <p class="error" *ngIf="addressForm.get('address')?.errors?.['required']">
+                <i class="fa-solid fa-circle-exclamation"></i>Address is required!
+            </p>
+            <p class="error" *ngIf="addressForm.get('address')?.errors?.['minlength']">
+                <i class="fa-solid fa-circle-exclamation"></i>Address must be at least 4 characters long!
+            </p>
+        </ng-container>
+        <div class="row">
+            <input type="submit" value="Add" class="save">
+        </div>
+    </form>
+
+</div>
