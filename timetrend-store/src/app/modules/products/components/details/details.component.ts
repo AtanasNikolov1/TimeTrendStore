@@ -12,7 +12,6 @@ import {
 } from 'rxjs';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CartService } from '../../services/cart.service'; // Import the CartService
 
 @Component({
   selector: 'app-details',
@@ -20,7 +19,7 @@ import { CartService } from '../../services/cart.service'; // Import the CartSer
   styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent implements OnInit {
-  private addToCartSubscription: Subscription | undefined;
+  // private addToCartSubscription: Subscription | undefined;
   productId: string = '';
   product$!: Observable<Product | undefined>;
   errorMessage!: string | undefined;
@@ -29,12 +28,11 @@ export class DetailsComponent implements OnInit {
 
   constructor(
     private productService: ProductsService,
-    private activateRoute: ActivatedRoute,
-    private authService: AuthService,
-    private router: Router,
-    private fb: FormBuilder,
-    private cartService: CartService
-  ) {}
+    private activateRoute: ActivatedRoute
+  ) // private authService: AuthService,
+  // private router: Router,
+  // private fb: FormBuilder,
+  {}
 
   ngOnInit() {
     this.productId = this.activateRoute.snapshot.paramMap.get('id')!;
